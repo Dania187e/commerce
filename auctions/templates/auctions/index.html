@@ -7,7 +7,7 @@
         <label for="Category">Choose a category:</label>
             <select name="Category" id="Category">
                 {% for cat in categories %}
-                    <option value="{{cat}}">{{cat.categoryname}}</option>
+                    <option value="{{cat}}">{{cat.category_name}}</option>
                 {% endfor %}  
             </select>
         <button type="submit" class="btn btn_warning">Select</button>

@@ -19,7 +19,13 @@
     </div>
 
    <div class="row mx-3">
-       {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
+           
+                <form action="{% url 'closeAuction' id=listing.id %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-fail">close auction </button>
+                </form>
+            
            {% if isListingInWatchlist %}
                <form action="{% url 'removeWatchlist' id=listing.id %}" method="POST">
                    {% csrf_token %}
